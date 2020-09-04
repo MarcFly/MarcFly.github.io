@@ -1,0 +1,133 @@
+<!DOCTYPE html> <!-- DOCTYPE says what type -->
+<html> <!-- html is markup language, says what is what, saying html means its the page-->
+
+<head> <!-- things that are not rendered, but helpers on how to render the page -->
+    <meta charset="utf-8"> <!-- meta is to describe metadadata, character set to render, define variables (listed below) -->
+    <!-- name, htt-equiv, charset,... are pretags that define what subspace to define, then you have to add a content to modify it-->
+    <meta name="application-name" content="Marc_Torres_Portfolio">
+    <meta name="generator" content="VisualStudioCode, Github, My Hands"> <!-- Generator is to name the program used -->
+    <meta name="description" content="MarcTorres DevPage">
+    <meta name="keywords" content="HTML, CSS, JavaScript, C++, GLSL, Graphics, Programming, Portfolio, Blog, DevBlog, Photography">
+    <meta name="author" content="Marc Torres">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- More tags at https://www.metatags.org/all-meta-tags-overview/ and https://www.w3schools.com/tags/tag_meta.asp-->
+
+    <title>Marc Torres Portfolio</title>
+
+    <style>
+        /* Here we are defining style inside the html file, how to embedd from external file?*/
+        h2{
+          /* Here we input declarations*/
+          color: rgb(0, 232, 15); /*you can give base colors or select rgb/a to give a color  */
+          background-color: aqua;
+        }
+        body{
+            background-color:aliceblue;
+        }
+
+        p{
+            color: purple;
+        }
+        /*# initial tells css that it is a specific id*/
+        /* ID are case sensitive */
+        /* ID will only select first id found, not all with same id */
+        #generalist-prog{
+            background-color:rebeccapurple;
+        }
+
+        /* Instead of ID we use class to select multiple things with the same style*/
+        /* to change a class, use a . (dot) before the name to specify that we are syling a class*/
+        .suffer{
+            background-color: yellow;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <!-- There are 6 types of headlines (h1, h2,...), defines importance -->
+    <h1>Marc Torres Portfolio</h1>
+
+    <!-- we can add attribute id to be selective for css later on -->
+    <h2 id="generalist-prog">Generalist Programming</h2>
+    
+    <p><!-- p generates a paragraph of text information -->
+        Lorem<br> <!-- br is a break line -->
+        <em>fucking</em> Ipsum. <!-- em is cursive/emphasis-->
+    </p>
+
+    <h2>Photography</h2>
+    <p>Lorem <strong>Ipsum</strong></p> <!-- strong makes it bold, you can wrap em and strong ovewr each other-->
+    <p><em><strong>Mamma Mia</strong></em></p>
+
+    <!-- Lists -->
+    <h2>Strengths</h2>
+    <ul> <!-- Unordered List, bullet points -->
+        <li>A</li><!-- List Item -->
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+    </ul>
+    <ol> <!-- Ordered List -->
+        <li>Fox</li>
+        <img src="https://www.vhv.rs/dpng/d/483-4836687_super-smash-bros-melee-fox-t-pose-png.png" alt="Fox McCloud" width="200" height="auto">
+        <!-- img starts image select, src is an attribute, you can put local or online url-->
+        <!-- alt is a description of the image-->
+        <!-- height/width change in pixels, seems that only with css you can change according to device, will see later, you can set the other to auto (or not set it) to get proportions to original-->
+
+        <li>Marth</li>
+        <li>Falco</li>
+        <li>Jigglypuff</li>
+    </ol>
+
+    <p class="suffer">aaaaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaa</p>
+    <p class="suffer">aaaaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaa</p>
+    <p class="suffer">aaaaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaa</p>
+    <p class="suffer">aaaaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaa</p>
+
+    <!-- This is an absolute url, goes in to other urls -->
+    <a href="https://www.google.com/search?client=opera&q=css+comment&sourceid=opera&ie=UTF-8&oe=UTF-8" target="_blank">
+        something<br>
+        <img src="AGP.png" width="200"> <!-- html does not like looking back to folders, like really does not like it -->
+        <img src="../images/AGP.jpg" width="200">
+    </a>
+    
+    <!-- target is an attribute to where is it open (new window, new tab, same tab,...) -->
+    <!-- the a tag must encapsulate everything you want to be clicked and hyperlinked to somewhere else-->
+
+    <!-- Internal Links, table of contents style, basically create and use ids as css (href="#id_selected") -->
+    <a href="#generalist-prog"><img src="AGP.png" width="200"></a>
+
+    <!-- Tables, there are a fuck ton of tags -->
+    <table> <!-- Table format can only be changed in css -->
+        <thead> <!-- Header for the table -->
+            <tr> <!-- Table Row -->
+                <th>Cacota</th> <!-- Header Column -->
+                <th>Cacota</th>
+                <th>Cacota</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td> <!-- Body Column-->
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td> <!-- Body Column-->
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td> <!-- Body Column-->
+                <td>3</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
