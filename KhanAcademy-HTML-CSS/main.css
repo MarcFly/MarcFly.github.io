@@ -3,3 +3,58 @@
     define styles to the parts
     We are embedding css to html
 */
+
+/* Here we are defining style inside the html file, how to embedd from external file?*/
+/* font-face is to define and load custom fonts theoretically, look into it more!*/
+
+@font-face{
+    font-family: "MyFont";
+    src:url("/fa-brands-400.ttf") ;
+}
+
+h2{
+    /* Here we input declarations*/
+    color: rgb(0, 232, 15); /*you can give base colors or select rgb/a to give a color  */
+    background-color: aqua;
+}
+body{
+    background-color:aliceblue;
+    font-size: 11px; /* There are lots of sizes to change here */
+    /* px defines base pixel size of body*/
+    /* Headers use a relative size to body text, times bigger (em)*/
+    /* There are more ways, em for multiplier of base, px for defining directly*/
+}
+
+p{
+    color: purple;
+    font-family: "MyFont", Helvetica, sans-serif;
+    font-size: 0.9em;
+    /* You can select specific font, type of font,... as long as all computers have the same fonts*/
+    /* Font-family you have to define a cascading selection, if not found it resorts to next ones,... until one is foundon host computer*/
+}
+
+/*# initial tells css that it is a specific id*/
+/* ID are case sensitive */
+/* ID will only select first id found, not all with same id */
+#generalist-prog{
+    background-color:rebeccapurple;
+}
+
+/* Instead of ID we use class to select multiple things with the same style*/
+/* to change a class, use a . (dot) before the name to specify that we are syling a class*/
+.suffer{
+    background-color: yellow;
+    font-weight:bold;
+    font-style: italic;
+    font: italic 14px bold; /*we can do it in one only thing to use less space, but eh, better have it separated unless obvious*/
+    line-height: 1.5em; /* Distance between lines*/
+    text-align: center;
+    text-decoration: underline;
+    /* There are waaaay more properties, just look for them */
+}
+
+/* Inheritance: Basically the defaults for body, p, h1,... will transfer to class or id unless changed inside.
+
+a {
+    text-decoration: none;
+}
