@@ -1,0 +1,151 @@
+/*Import Fonts easily*/
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
+
+
+/* Defaults */
+html, body{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+strong, b{
+    color: #ffffff;
+    font-weight: 600;
+}
+em, i{
+    font-style: italic;
+}
+
+h1, h2, h3{
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+/* Page Wrapping*/
+#page{
+    /*background-image: none;*/
+    height: 100%;
+    width:100%;
+    position: fixed;
+    background-color: black;
+    background-image: none;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.6) 0%,rgba(147, 136, 236, 0.6) 49%, rgba(90, 103, 226, 0.6) 100%);
+}
+
+/* Header */
+    #header{
+        align-content: left;
+    }
+
+    .menuStyle{
+        align-content:  right;
+        height: 100%;
+        width: 15%;
+        top: 0;
+        right: -20%;
+        position:fixed;
+        background-color: rgba(46, 41, 87, 0.9);
+        overflow-x: hidden;
+        padding-top: 1%;
+        padding-left: .2%;
+        transition: .35s;
+    }
+
+    .menuStyle h2{
+        color: rgba(199, 192, 251, 0.9);
+        position: relative;
+        font-size:1.4em;
+        left:2%;
+        top: 3%;
+        text-transform: uppercase;
+    }
+    .menuStyle h2:after{
+        content:' ';
+        display:block;
+        border:1px solid rgba(199, 192, 251, 0.9);
+    }
+
+    .links{
+        align-content: center;        
+    }
+
+    .menuStyle .links a{
+        padding: 0% 5%;
+        font-size:2em;
+        text-decoration: none;
+        color: rgba(156, 146, 236, 0.9);
+        display: block;
+        transition: .25s;
+    }
+
+    .menuStyle a:hover{
+        color: rgba(199, 192, 251, 0.9);
+        background: rgba(62, 59, 78, 0.9);
+        font-weight: bolder;
+    }
+
+    .menuStyle .closeBTN{
+        color: rgba(199, 192, 251, 0.9);
+        position: absolute;
+        font-size:1.4em;
+        right:2%;
+        top: 3%;
+    }
+
+    .menuStyle .closeBTN:hover{
+        color: rgba(251, 192, 192, 0.9);
+        transition: .2s;
+    }
+
+/* Banner */
+
+    #banner{
+        font-family:"Source Sans Pro", Helvetica, sans-serif;
+        font-weight:normal;
+        font-style: normal;
+        letter-spacing: .03em;
+        text-transform: uppercase;
+
+        align-content: center;
+
+    }
+
+    #banner h1{
+        font-size: 4em;
+        padding: 0% 10%;
+    }
+
+    #banner h1:after{
+        margin: 1% 0%;
+        content:' ';
+        display:block;
+        border:1px solid grey;
+    }
+
+    #banner p{
+        font-size:2em;
+        padding: 0% 10%;
+    }
+
+    #banner:after{
+        content:' ';
+        display:block;
+        border:1px solid black;
+    }
+
+
+/* Recent Projects */
+.rec_projs{
+
+}
+
+/* Photography */
+.photography{
+
+}
