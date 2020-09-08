@@ -4,7 +4,7 @@
 
 
 /* Defaults */
-html, body{
+html{
     height: 100%;
     width: 100%;
     position: fixed;
@@ -13,6 +13,11 @@ html, body{
     left:0;
     right:0;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+body{
+    height: 100%;
+    width: 100%;
 }
 
 strong, b{
@@ -33,9 +38,11 @@ h1, h2, h3{
     height: 100%;
     width:100%;
     position: fixed;
-    background-color: black;
-    background-image: none;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.6) 0%,rgba(147, 136, 236, 0.6) 49%, rgba(90, 103, 226, 0.6) 100%);
+
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
 }
 
 /* Header */
@@ -118,25 +125,28 @@ h1, h2, h3{
 
     #banner h1{
         font-size: 4em;
+        color: rgb(221, 218, 218);
         padding: 0% 10%;
     }
 
     #banner h1:after{
-        margin: 1% 0%;
+        margin: 3% 0%;
         content:' ';
         display:block;
-        border:1px solid grey;
+        border:1px solid rgba(221, 218, 218, 0.5);
     }
 
     #banner p{
         font-size:2em;
+        color: rgb(221, 218, 218);
         padding: 0% 10%;
     }
 
     #banner:after{
+        margin: 6% 0%;
         content:' ';
         display:block;
-        border:1px solid black;
+        border:1px solid rgb(197, 197, 197);
     }
 
 
