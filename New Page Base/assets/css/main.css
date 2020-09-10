@@ -7,16 +7,21 @@
 html{
     height: 100%;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
-    
 }
 
 body{
+    margin-top:0;
+    padding-top:0;
     scroll-behavior: smooth;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    overflow: hidden;
+
+    background: linear-gradient(rgba(46, 41, 87, 0.8) 0%, rgba(46, 41, 87, 0.6) 90%, rgba(46, 41, 87, 0.5) 100%);
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 strong, b{
@@ -33,11 +38,11 @@ h1, h2, h3{
 
 /* Page Wrapping*/
 #page{
-    /*background-image: none;*/
-    height: 100%;
+    
+    margin-top: 0;
+    
     width:100%;
-    position: fixed;
-    overflow-y: scroll;
+    position: absolute;
     
     top:0;
     bottom:0;
@@ -46,44 +51,58 @@ h1, h2, h3{
 }
 
 /* Header */
-    #hide_head{
-        top: 0;
-        left: 0;
+    #head{
+        position:fixed;
         width: 100%;
         background: rgb(41, 32, 90);
-        position: fixed;
         transition: 0.4s;
-        opacity: 0%;
         pointer-events: none;
+        min-height: 5em;
         filter: drop-shadow(0 0 0.75rem black);
+        opacity: 0%;
+        z-index: 1;
     }
 
-    #hide_head a{
+    #head a{
+        top: .2em;
+        left: .2em;
+        position: absolute;
+        float: left;
         text-decoration: none;
         text-transform: uppercase;
-        position: relative;
-        left: 1%;
-        font-size: 1.5em;
-
+        text-align: center;
+        font-size: 2em;
+        color: rgba(199, 192, 251, 0.9);
     }
+
+    #head a:hover{
+        filter: drop-shadow(0 0 0.55rem black);
+    }
+    
 
     #menuBTN{
         position: fixed;
-        right: 40px;
-        top: 5px;
+        top: 2px;
+        right: 21px;
         font-size: 3.5em;
         color: rgba(199, 192, 251, 0.9);
+        transition: .4s;
+        rotate: 0deg;
+        z-index: 3;
+        
     }
     #menuBTN:hover{
         filter: drop-shadow(0 0 0.55rem black);
     }
 
     .menuStyle{
-        align-content:  right;
-        padding: 1% 1%;
-        width: 268px;
-        right:-10000px;
+        top:0;
         position:fixed;
+        z-index:2;
+        align-content:  right;
+        padding: .5% 1%;
+        width: 268px;
+        right:-1000px;        
         overflow: hidden;
         background-color: rgba(46, 41, 87, 0.9);
         border:1px solid rgba(199, 192, 251, 0.9);
