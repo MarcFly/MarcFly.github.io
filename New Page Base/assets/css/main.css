@@ -7,19 +7,18 @@
 html{
     height: 100%;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
     margin-top:0;
     padding-top:0;
-    scroll-behavior: smooth;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
 
     background: linear-gradient(rgba(46, 41, 87, 0.8) 0%, rgba(46, 41, 87, 0.6) 90%, rgba(46, 41, 87, 0.5) 100%);
-
     background-repeat: no-repeat;
     background-attachment: fixed;
 }

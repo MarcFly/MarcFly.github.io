@@ -1,6 +1,15 @@
+// Configure Require.js
+// This will be base app to load and from here we do
 
-// This is a local construction to make things from inside unavailable outside
+requirejs.config({
+    baseUrl: "assets/js/libs",
+    paths:{
+        app: "../main"
+    }
+})
 
+
+// SideBar Menu
 var menuV = false;
 
 function toggleMenu(){
@@ -20,6 +29,8 @@ function toggleMenu(){
     
 }
 
+// Header Hiding on Scrolling
+
 var prev = window.pageYOffset;
 
 window.onscroll = function(){
@@ -38,9 +49,27 @@ window.onscroll = function(){
         el.style.opacity = "0%";
     }
     prev = curr;
-
 }
 
+// Get Photos from folder
 
+function onLoad(){
+    requirejs(["jquery.min", "require"]),
+    function($, require){
+        const path = require("path");
+        const fs = require("fs");
+        
+        const dirPath = path.join(__dirname, "../assets/images/photography/2019");
+        fs.readdir(dirPath, function(err, files){
+            if(err){return console.log("Unable to scan dir: " + err)}
+        
+            var photo_s = document.getElementById("photo_section");
+            for(i = 0; i < 4; ++i)
+            {
+                photo_s.appendChild('<img src="' + files[i] + '">' );
+            }
+        })
+    }
+}
 
 
